@@ -1,0 +1,41 @@
+<%- include("./partials/header.ejs") %>
+
+<main>
+  <section>
+    <div class="between"><span class="h2">Log in</span><a href="/user-create/">New user</a></div>
+    <form id="user-form-login">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button id="login">Log in</button>
+    </form>
+    <hr>
+  </section>
+  <section>
+    <span class="h2">Log out</span>
+    <form id="user-form-logout">
+      <button id="logout">Log out</button>
+    </form>
+    <hr>
+  </section>
+  <span class="h2">Log out all</span>
+  <form id="user-form-logout-all">
+    <button id="logoutall">Log out all</button>
+  </form>
+  <hr>
+  </section>
+
+  <section>
+    <form action="/forum" method="GET" type="txt/html">
+      //// right type ????
+      <label for="for-name">Name:</label>
+      <input type="text" id="for-name" name="name" required>
+      <label for="name">Password:</label>
+      <input type="password" id="for-password" name="password" required>
+      <button>Go through</button>
+    </form>
+  </section>
+</main>
+
+<%- include("./partials/footer-index.ejs") %>

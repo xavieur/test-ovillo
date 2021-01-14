@@ -1,0 +1,49 @@
+{
+  "name": "test-ovillo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Xavier Valera",
+  "scripts": {
+    "start": "node src/server.js",
+    "nodemon": "nodemon -r dotenv/config src/server.js",
+    "sass": "sass --watch src/sass/:public/css/",
+    "dev:back": "concurrently \"yarn run nodemon\" \"yarn run sass\"",
+    "build:front": "webpack --watch",
+    "dev:front": "webpack serve",
+    "dev": "concurrently \"yarn run nodemon\" \"yarn run build:front\""
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.11",
+    "multer": "^1.4.2",
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "validator": "^13.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "concurrently": "^5.3.0",
+    "css-loader": "^5.0.1",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7",
+    "postcss-loader": "^4.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.32.4",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.13.0",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
